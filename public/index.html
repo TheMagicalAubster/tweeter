@@ -6,15 +6,19 @@
 
     <!-- External CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap" rel="stylesheet">
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="https://kit.fontawesome.com/361d353072.js" crossorigin="anonymous"></script>
+    
   </head>
 
   <body>
@@ -23,7 +27,59 @@
       <span>tweeter</span>
     </nav>
 
+    <!-- Header Schtuff -->
+    <header>
+      <div class="avatar">
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div class="name">
+          <h2>The Magical Aubster Tweet Machine</h2>
+      </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main>
+      <section class="tweet-section" id="hover">
+        <!-- Display Tweets here:-->
+        <div class="name-handle">
+          <p>Rhonda Jacobs</p>
+          <p>@MrsJacobs</p>
+        </div>
+        
+        <div class="tweet">
+          <p>Hello World!</p>
+        </div>
+        
+        <div class="bottom">
+          <p>10 days ago</p>
+          <div> 
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="new-tweet">
+        <form action="/tweets/" method="POST" class="newtweet">
+          <label for="tweet-text">What are you humming about?</label>
+          <textarea name="text" id="tweet-text"></textarea>
+          <div class="button-counter">
+            <button type="submit" id="add-new-tweet">Tweet</button>
+            <output name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <!-- App JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
+
+
+

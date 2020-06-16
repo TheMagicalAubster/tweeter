@@ -1,0 +1,35 @@
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    background-color: #4056A1;
+    color:  #FFFFFF;
+    font-family: 'Bungee', sans-serif;
+    border-radius: 5px;
+}
+
+.newtweet {
+    display: flex;
+    justify-content: center;
+    font-family: 'Source Sans Pro', sans-serif; 
+    padding: 2em;
+}
+
+#tweet-text {
+    display: flex;
+    height: 40px;
+    
+}
+
+.button-counter {
+    display: flex;
+    justify-content: space-between;
+}
+
