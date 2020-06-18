@@ -3,7 +3,6 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 button {
@@ -24,12 +23,12 @@ button {
 
 #tweet-text {
     display: flex;
-    height: 40px;
-    
+    margin-top: 1em;
 }
 
 .button-counter {
     display: flex;
     justify-content: space-between;
+    padding-top: 1em;
 }
 
