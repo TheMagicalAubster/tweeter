@@ -15,3 +15,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
+
+## Images
+Below shows layout and functionality: 
+!["Screenshot of the Tweeter"](/public/images/ScreenShot1.png)

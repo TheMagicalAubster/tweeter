@@ -1,6 +1,6 @@
 "use strict";
 
-const moment      = require("./locale/moment");
+// const moment      = require("./locale/moment");
 const Chance      = require("chance"),
       chance      = new Chance();
 

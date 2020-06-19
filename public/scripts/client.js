@@ -3,7 +3,7 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-const moment      = require("moment");
+// const moment      = require("moment");
 
 $(() => {
 
