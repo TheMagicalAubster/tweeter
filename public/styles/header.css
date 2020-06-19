@@ -1,18 +1,40 @@
-header {
-  height: 400px;
-  width: 100%; 
-  background-color: #a87d32;
-  margin-top: 90px;
-}
+@media only screen and (max-width: 1024px) {
+  header {
+    height: 400px;
+    background-color: #a87d32;
+    margin-top: 90px;
+    flex: 1 1 100%;
+  }
 
-.avatar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  .avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-.name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  header {
+    height: 400px;
+    background-color: #a87d32;
+    margin-top: 90px;
+    flex: 1 1 50%; 
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 100%
+  }
+  .name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    }
 }

@@ -13,6 +13,7 @@
   display: flex;
   justify-content: space-between;
   font-size: large;
+  margin: 0.5em;
 }
 
 .tweet-wrapper:hover {
@@ -39,6 +40,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
+  margin: 1em;
 }
 .tweet-too-long {
   text-align: left;
@@ -49,6 +51,8 @@
 }
 .tweet-wrapper {
   border: solid;
+  margin: 10px;
+  border-radius: 5px;
 }
 
 .bottom {
@@ -56,6 +60,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: small;
+  margin: 1em;
 }
 
 .error {
@@ -65,5 +70,20 @@
   border-radius: 5px;
   color: red;
   margin: 2em;
+
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+  #tweet-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-between;
+    height: 100%; 
+    padding: 10px;
+    opacity: 0.5;
+  }
 
 }

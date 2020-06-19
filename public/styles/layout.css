@@ -21,17 +21,42 @@ body {
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
+@media only screen and (max-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: #f4f1ec;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 30px;
+    flex: 1 1 100%;
+  }
 
-main {
+
+}
+
+.entirely {
   display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-direction: column;
-  width: 90%;
-  margin: auto;
-  background-color: #f4f1ec;
-  font-family: 'Source Sans Pro', sans-serif;
-  padding: 30px;
+  flex-wrap: wrap;
+  margin-top: 2em;
+
+}
+
+
+@media only screen and (min-width: 1024px) {
+  main {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    background-color: #f4f1ec;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 30px;
+    flex: 1 1 50%;
+  }
 
 }
 
