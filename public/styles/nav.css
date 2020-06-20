@@ -1,6 +1,8 @@
 
 
 nav {
+  display: flex;
+  justify-content: space-between;
   font-family: 'Bungee', sans-serif;
   background-color: #4056A1;
   height: 90px;

@@ -3,12 +3,17 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-// const moment      = require("moment");
 
 $(() => {
 
+  $('#add-new-tweet').on('click', function(event) {
+    $("#tweet-text").focus();
+    $('.newtweet').addClass('open');  
+  });
+
   $('.newtweet').on('submit', function(event) {
     $('.error').remove();
+    $('.newtweet').removeClass('open');
 
     event.preventDefault(); //don't refresh the page which is the default
     const text = $(this.text).val();
@@ -39,8 +44,8 @@ $(() => {
 
 
   const createTweetElement = (data) => {
-    let date = new Date(data.created_at);
-    // let date = moment(data.created_at).fromNow(); //saved for in case get moment to work
+    // let date = new Date(data.created_at);
+    let date = moment(data.created_at).fromNow(); //saved for in case get moment to work
     const $tweet =
                 `<article class="tweet-wrapper">
                     <div class="name-handle">
@@ -121,5 +126,5 @@ $(() => {
 
 
 
-  loadTweets();
+loadTweets();
 });

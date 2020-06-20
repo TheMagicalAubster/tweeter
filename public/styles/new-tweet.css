@@ -15,10 +15,13 @@ button {
 }
 
 .newtweet {
-    display: flex;
+    display: none;
     justify-content: center;
     font-family: 'Source Sans Pro', sans-serif; 
     padding: 2em;
+}
+.newtweet.open {
+    display: flex;
 }
 
 #tweet-text {
