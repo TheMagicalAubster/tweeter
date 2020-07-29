@@ -13,6 +13,8 @@ $(() => {
     
     if ((charCount) < 0) {
       $counter.text(charCount).css('color', 'red');
+    } else {
+      $counter.text(charCount).css('color', 'black');
     }
     $counter.text(charCount);
 

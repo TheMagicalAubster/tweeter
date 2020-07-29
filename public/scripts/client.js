@@ -5,7 +5,6 @@
  */
 
 $(() => {
-
   $('#add-new-tweet').on('click', function(event) {
     $("#tweet-text").focus();
     $('.newtweet').addClass('open');  
@@ -15,10 +14,14 @@ $(() => {
     $('.error').remove();
     $('.newtweet').removeClass('open');
 
-    event.preventDefault(); //don't refresh the page which is the default
-    const text = $(this.text).val();
+    //don't refresh the page which is the default
+    event.preventDefault(); 
+    //getting data from tweet DOM, serialize and send to server if validated
+    const text = $(this.text).val(); 
     const data = $(this).serialize();
+
     const charlength = 140;
+    // ensuring that tweet stays between 0-140 chars
 
     if (text.length > charlength) {
       const $tweetError = `<article class="error">
@@ -28,15 +31,18 @@ $(() => {
       $('.newtweet').prepend($tweetError);
       $('.error').slideDown(5000, () => {
       });
+    
     } else if (!text) {
+      // if no text, prompt to add text 
       const $tweetError = `<article class="error">
                               <p>More wordiness this time.</p>
                            </article>`;
-   
+      //add to tweets
       $('.newtweet').prepend($tweetError);
       $('.error').slideDown(5000, () => {
       });
     } else {
+      $(this).children('#tweet-text').val("")
       $.post('/tweets', data);
       loadTweets();
     }
@@ -117,7 +123,7 @@ $(() => {
   const loadTweets = () => {
     $.ajax('/tweets', {method: 'GET' })
       .then(function(data) {
-        console.log("Data in the loadTweets is ", data);
+        // console.log("Data in the loadTweets is ", data);
         renderTweets(data);
 
       });
